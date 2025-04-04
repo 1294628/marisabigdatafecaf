@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: MARISA
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run seu_script.py
+    pythonVersion: 3.13
+    envVars:
+      - key: DATABASE_URL
+        fromSecret: DATABASE_URL
